@@ -1,0 +1,79 @@
+body {
+  padding:10px;
+  background-color: black;
+}
+
+.cover:hover {
+    cursor: pointer;
+    opacity: 0.4;
+
+}
+
+#instructions{
+	color: white;
+	text-align: center;
+}
+
+.songList:hover {
+    cursor: pointer;
+    opacity: 0.4;
+
+}
+.songList {
+	width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: cover;
+    list-style-type: none;
+}
+
+.cover {
+	width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    list-style-type: none;
+}
+
+.art {
+	margin: auto;
+}
+
+
+#songArtist {
+	display: none;
+}
+
+.cover:hover #songArtist {
+	display:;
+}
+
+.searchFunction {
+	/*margin: auto;*/
+	width: 70%;
+	padding-top: 10px;
+}
+
+.searchFunction h3 {
+	text-align: center;
+	color: white;
+}
+
+.searchFunction button{
+	margin: auto;
+	width: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	background-color: green;
+}
+
+.spotifySearch {
+	width: 700px ;
+  	margin-top: auto ;
+  	margin: auto ;
+
+}
+
+
+
