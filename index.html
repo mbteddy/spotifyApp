@@ -21,7 +21,7 @@
 	<!-- Initiate app -->
 	<div ng-app="myApp" ng-controller="myCtrl">
 		<!-- song list -->
-		<div class="container" ng-show="!showTheForm">
+		<div class="container top" ng-show="!showTheForm">
 			<p id="instructions">Click Songs and make a playlist</p>
 			<ul>
 				<div class="songList" ng-repeat="song in savedSongs" style="background-image:url({{song.cover}})" ng-mouseover="play(song.tune)" ng-click="getArtists(song.id, song.cover, song.tune, back)">
@@ -29,29 +29,31 @@
 			</ul>
 		</div>
 		<!-- Form -->
-		<div class="spotifySearch">
-			<form class="container" name="songForm" ng-show="showTheForm" novalidate>
-				<div class="form-group searchFunction">
-					<h3>Spotify Search:</h3>
-					<br>
-					<div class="search-box">
-						<input name="search" placeholder="Enter your search.." ng-model="track" class="form-control" required>
-							<span style="color:red" ng-show="songForm.search.$dirty && songForm.search.$invalid">
-								<span ng-show="songForm.search.$error.required">Must input search.</span>
-							</span>
-						</input>
+		<div class="coolPic" ng-show="showTheForm">
+			<div class="spotifySearch">
+				<form class="container" name="songForm" ng-show="showTheForm" novalidate>
+					<div class="form-group searchFunction">
+						<h3>Spotify Search:</h3>
+						<br>
+						<div class="search-box">
+							<input name="search" placeholder="Enter your search.." ng-model="track" class="form-control" required>
+								<span style="color:red" ng-show="songForm.search.$dirty && songForm.search.$invalid">
+									<span ng-show="songForm.search.$error.required">Must input search.</span>
+								</span>
+							</input>
+						</div>
 					</div>
-				</div>
-				<div class="form-group searchFunction">
-					<button ng-disabled="songForm.search.$invalid" class="btn btn-success center-block" ng-click="getSongs(track)" type="submit">Submit</button>
-				</div>
-			</form>
+					<div class="form-group searchFunction">
+						<button ng-disabled="songForm.search.$invalid" class="btn btn-success center-block" ng-click="getSongs(track)" type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<!-- nav controller -->
-		<div class="container">
-			<ul>
-
-			</ul>
+		<!-- Description -->
+		<div>
+			<p id="description">
+				Hover to preview songs and click to save and bring up related artists and songs!
+			</p>
 		</div>
 		<!-- Results -->
 		<div class="container-fixed art">
